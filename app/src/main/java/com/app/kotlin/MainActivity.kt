@@ -2,6 +2,7 @@ package com.app.kotlin
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -40,9 +41,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.openWebButton.setOnClickListener {
 
-            val websiteAddress = ""
+            val websiteAddress = "https://github.com/fekri86114"
 
-            val intent = Intent(Intent.ACTION_VIEW, )
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(websiteAddress)) // when you want to pass a link you have to use Uri.parse()
+            startActivity(intent)
 
         }
 
